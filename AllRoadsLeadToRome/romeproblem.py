@@ -17,5 +17,7 @@ connections = [
     ('Lisbon', 'Rome', 170),
     ('Dublin', 'Rome', 170),
     ]
-    
-for city in connections
+connection_count = 0
+for city in connections:
+    if city[1] == "Rome":
+        
