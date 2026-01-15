@@ -18,4 +18,14 @@ connections = [
     ('Dublin', 'Rome', 170),
     ]
     
-for city in connections
+connection_count = []
+connection_time = []
+
+for flight in connections:
+    if flight[1] == "Rome":
+        connection_count.append(flight)
+        connection_time.append(flight[2])
+
+average_time = (sum(connection_time) / len(connection_time))
+
+print(len(connection_count), "connections lead to Rome with an average flight time of", average_time, "minutes")
