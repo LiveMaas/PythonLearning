@@ -32,10 +32,13 @@ sample_dict = {
     "nose": "Nase"
 }
 
-user_input = input("Enter a word in English or EXIT: ")
-print(user_input)
-if user_input == "EXIT":
-    print("Bye!")
-for word, german_word in sample_dict.items():
-    if word == user_input:
-        print(f"Translation: {german_word}")
+while True:
+    user_input = input('Enter a word in English or EXIT: ')
+    if user_input == 'EXIT':
+        break
+    if user_input in sample_dict:
+        print ('Translation:', sample_dict[user_input])
+    else:
+        print('No match!')
+ 
+print('Bye!')
